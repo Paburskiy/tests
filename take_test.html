@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take {{ test_name }}</title>
+    <link rel="stylesheet" href="staic/style.css">
+</head>
+<body>
+    <div class="body">
+        <h1>Test: {{ test_name }}</h1>
+            <form method="POST">
+            {% for question in questions %}
+            <p>{{ question }}</p>
+            <input type="text" name="{{ question }}" required>
+            {% endfor %}
+            <button type="submit">Submit</button>
+            </form>
+    </div>
+</body>
+</html>

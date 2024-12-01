@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Portal</title>
+    <link rel="stylesheet" href="staic/style.css">
+</head>
+<body>
+    <div class="body">
+        <h1>Welcome to the Test Portal</h1>
+        <a href="/create_test">Create a New Test</a>
+        <h2>Available Tests</h2>
+        <ul>
+            {% for test_name in tests %}
+            <li><a href="/take_test/{{ test_name }}">{{ test_name }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
