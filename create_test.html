@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Test</title>
+    <link rel="stylesheet" href="staic/style.css">
+</head>
+<body>
+    <div class="body">
+        <h1>Create a New Test</h1>
+        <form method="POST">
+            <label for="test_name">Test Name:</label>
+            <input type="text" id="test_name" name="test_name" required><br><br>
+            <div id="questions">
+                <div>
+                    <label>Question:</label>
+                    <input type="text" name="question_0" required>
+                    <label>Answer:</label>
+                    <input type="text" name="answer_0" required>
+                </div>
+            </div>
+            <button type="button" onclick="addQuestion()">Add Question</button><br><br>
+            <button type="submit">Create Test</button>
+        </form>
+
+        <script>
+            let questionCount = 1;
+            function addQuestion() {
+                const questionsDiv = document.getElementById('questions');
+                const newQuestion = document.createElement('div');
+                newQuestion.innerHTML = `
+                    <label>Question:</label>
+                    <input type="text" name="question_${questionCount}" required>
+                    <label>Answer:</label>
+                    <input type="text" name="answer_${questionCount}" required>
+                `;
+                questionsDiv.appendChild(newQuestion);
+                questionCount++;
+            }
+        </script>
+    </div>
+</body>
+</html>
