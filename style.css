@@ -1,0 +1,12 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('https://via.placeholder.com/1500'); /* Замените на URL вашего фона */
+    background-size: cover;
+    background-position: center;
+}
